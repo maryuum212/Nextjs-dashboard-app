@@ -1,14 +1,17 @@
-// This file contains placeholder data that you'll be replacing with real data in the Data Fetching chapter:
-// https://nextjs.org/learn/dashboard-app/fetching-data
+// placeholder-data.ts
+// This file contains all placeholder data arrays used for seeding the database.
+
+// Users array with plain-text passwords (to be hashed on seed)
 const users = [
   {
     id: '410544b2-4001-4271-9855-fec4b6a6442a',
     name: 'User',
     email: 'user@nextmail.com',
-    password: '123456',
+    password: '123456', // will be hashed before saving
   },
 ];
 
+// Customers array with customer info
 const customers = [
   {
     id: 'd6e15727-9fe1-4961-8c5b-ea44a9bd81aa',
@@ -48,6 +51,7 @@ const customers = [
   },
 ];
 
+// Invoices array, linking to customers by customer_id
 const invoices = [
   {
     customer_id: customers[0].id,
@@ -129,6 +133,7 @@ const invoices = [
   },
 ];
 
+// Monthly revenue data for charts or reports
 const revenue = [
   { month: 'Jan', revenue: 2000 },
   { month: 'Feb', revenue: 1800 },
@@ -144,4 +149,5 @@ const revenue = [
   { month: 'Dec', revenue: 4800 },
 ];
 
+// Export all data arrays for use in other modules like the seed script
 export { users, customers, invoices, revenue };
